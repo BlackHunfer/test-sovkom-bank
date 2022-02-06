@@ -54,6 +54,9 @@
                 <btn-border @click.native="addSetting(footageSetting)" title="Добавить метраж"></btn-border>
               </div>
             </div>
+            <button type="submit" class="desktop-hidden">
+              <btn-default title="Найти" @submit="$emit('submit')"></btn-default>
+            </button>
           </div>
           <div class="search__footer">
                 <div class="search__footer__left">
@@ -379,6 +382,10 @@ button[type='submit']{
   box-sizing: border-box;
 }
 
+.desktop-hidden{
+  display: none;
+}
+
 @media (max-width: 767px){
   .search__body {
     padding: 20px 15px;
@@ -425,6 +432,13 @@ button[type='submit']{
     select, input{
       border-right: 0 !important;
     }
+  }
+
+  .desktop-hidden{
+    display: block;
+    margin-top: 20px;
+    border-radius: 3px;
+    overflow: hidden;
   }
 }
 
