@@ -55,7 +55,7 @@
               </div>
             </div>
             <button type="submit" class="desktop-hidden">
-              <btn-default title="Найти" @submit="$emit('submit')"></btn-default>
+              <btn-default title="Найти"></btn-default>
             </button>
           </div>
           <div class="search__footer">
